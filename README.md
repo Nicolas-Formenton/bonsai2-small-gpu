@@ -28,7 +28,9 @@ without the flag on all three prompts. Details and every run: `results/KERNEL_RE
   vision tower. Read `serve/README.md` first.
 - `kernel/` the two changes to the PrismML fork as patch series and ready-to-read PR bodies:
   the PTQ1_0 mat-vec kernel (fast, batch-invariant small batches) and the Hadamard fix for the MTP
-  draft graph. Branches: `pr-ptq1-mmv` and `pr-hadamard-mtp` on github.com/sudoingX/llama.cpp.
+  draft graph. Branches: `pr-ptq1-mmv` and `pr-hadamard-mtp` on github.com/sudoingX/llama.cpp,
+  and `bonsai2` which stacks both. Upstream pull requests: PrismML-Eng/llama.cpp#217 (Hadamard fix)
+  and PrismML-Eng/llama.cpp#218 (kernel).
 - `graft/` the tools that put the Qwen 3.8 27B MTP head back into the Bonsai 2 GGUF: a byte-range
   GGUF reader and writer that handles PrismML's custom quant types, head extraction, merge with a
   byte-exact `--strip`, the identity and batch-numerics probes, tests, and `recipe.txt`.

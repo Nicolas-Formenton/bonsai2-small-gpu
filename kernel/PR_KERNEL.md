@@ -104,7 +104,7 @@ cmake --build build --target llama-bench test-backend-ops llama-server -j
 ```
 
 The invariance check (same prefix, last N tokens in one batch, compare the next-token logprobs) is
-`tools/batch_numerics.py` in github.com/sudoingX/bonsai2-mtp against a running `llama-server`.
+`tools/batch_numerics.py` in github.com/sudoingX/bonsai2-small-gpu against a running `llama-server`.
 
 ## Known limits
 

@@ -17,7 +17,7 @@ before (the lookup finds nothing).
 
 No PrismML export carries an MTP block today, so the case never came up. It does the moment
 someone grafts the Qwen 3.8 `blk.64.nextn.*` tensors onto Bonsai 2 to get `--spec-type draft-mtp`
-(the graft tools and measurements are in github.com/sudoingX/bonsai2-mtp). Without the fix the
+(the graft tools and measurements are in github.com/sudoingX/bonsai2-small-gpu). Without the fix the
 draft context is refused at load:
 
 ```

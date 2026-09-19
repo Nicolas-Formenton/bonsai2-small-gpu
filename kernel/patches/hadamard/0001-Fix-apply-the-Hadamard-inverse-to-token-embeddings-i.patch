@@ -1,4 +1,4 @@
-From 76106714ffee809a5a0a45a126f12d86ccd94233 Mon Sep 17 00:00:00 2001
+From 1dc4a579b42905007dba3b3ef42e69fed57a9056 Mon Sep 17 00:00:00 2001
 From: sudoingX <200180104+sudoingX@users.noreply.github.com>
 Date: Fri, 18 Sep 2026 21:36:39 +0000
 Subject: [PATCH] Fix: apply the Hadamard inverse to token embeddings in the
@@ -14,7 +14,7 @@ llama_verify_hadamard_graph rejects the draft context.
 Reproduction: take a Hadamard-folded qwen35 file with a nextn block, for
 example Ternary-Bonsai-2-27B-PTQ1_0 with the blk.64 tensors of a Qwen 3.8 27B
 GGUF appended and qwen35.nextn_predict_layers = 1 (tools in
-github.com/sudoingX/bonsai2-mtp), and start
+github.com/sudoingX/bonsai2-small-gpu), and start
 
   llama-server -m model.gguf -ngl 99 -fa on -c 32768 --spec-type draft-mtp --spec-draft-n-max 1
 
@@ -34,7 +34,7 @@ path as before.
  1 file changed, 15 insertions(+)
 
 diff --git a/src/models/qwen35.cpp b/src/models/qwen35.cpp
-index c5f816e96..174f22431 100644
+index c5f816e..174f224 100644
 --- a/src/models/qwen35.cpp
 +++ b/src/models/qwen35.cpp
 @@ -1,5 +1,6 @@
@@ -66,5 +66,5 @@ index c5f816e96..174f22431 100644
          tok_embd = inp->embd;
      }
 -- 
-2.34.1
+2.43.0
 

@@ -1,4 +1,4 @@
-bonsai2-mtp recipe: graft the Qwen 3.8 27B MTP head onto Ternary Bonsai 2 27B
+bonsai2-small-gpu recipe: graft the Qwen 3.8 27B MTP head onto Ternary Bonsai 2 27B
 
 You need: the PrismML llama.cpp fork (release prism-b10685 or later, CUDA build),
 Python 3.10+, and two GGUF files. Nothing here decodes tensors, so no GPU and

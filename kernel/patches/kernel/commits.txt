@@ -1,0 +1,5 @@
+588318660 Fix: use the mat-vec kernel for bf16 matrices under 64 rows at 2 to 8 columns
+a55badae9 Add: GGML_CUDA_BATCH_INVARIANT for batch-invariant small-batch kernels
+a4344b545 Test: add Bonsai 2 projection shapes to the mul_mat perf cases
+c7551241a Add: dedicated PTQ1_0 mat-vec kernel with full lane utilization
+98ea41080 Add: planar-transposed activation layout for the PTQ1_0 mat-vec path

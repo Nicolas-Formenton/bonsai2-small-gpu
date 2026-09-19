@@ -1,0 +1,1 @@
+76106714f Fix: apply the Hadamard inverse to token embeddings in the qwen35 MTP graph

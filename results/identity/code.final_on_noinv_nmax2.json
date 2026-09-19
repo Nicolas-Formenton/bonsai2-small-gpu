@@ -1,0 +1,1542 @@
+{
+ "prompt_id": "code",
+ "arm": "final_on_noinv_nmax2",
+ "prompt": "write a python function that merges two sorted lists into one sorted list, with docstring.",
+ "max_tokens": 300,
+ "finish_reason": "length",
+ "completion_tokens": 300,
+ "reasoning_chars": 0,
+ "sha256": "2ff5fe93d7d3568fecf4f79bdbd9a2d0f2c7f5fef3b21e2978fd63584bd468ab",
+ "timings": {
+  "cache_n": 0,
+  "prompt_n": 30,
+  "prompt_ms": 416.186,
+  "prompt_per_token_ms": 13.872866666666665,
+  "prompt_per_second": 72.08315512775539,
+  "predicted_n": 300,
+  "predicted_ms": 5441.662,
+  "predicted_per_token_ms": 18.199538461538463,
+  "predicted_per_second": 54.94644834611191,
+  "draft_n": 220,
+  "draft_n_accepted": 189
+ },
+ "tokens": [
+  {
+   "token": "```",
+   "logprob": -0.04821479693055153,
+   "top": [
+    [
+     "```",
+     -0.04821479693055153
+    ],
+    [
+     "Here",
+     -3.407078504562378
+    ],
+    [
+     "def",
+     -5.272992134094238
+    ],
+    [
+     "#",
+     -5.2803449630737305
+    ]
+   ]
+  },
+  {
+   "token": "python",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "def",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " merge",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_sorted",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_lists",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "(list",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "1",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ":",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " list",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " list",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "2",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ":",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " list",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ")",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ->",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " list",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ":",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " \"\"\"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " Merge",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " two",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " sorted",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " lists",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " into",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " a",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " single",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " sorted",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " list",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ".",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " This",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " function",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " takes",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " two",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " lists",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " that",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " are",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " already",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " sorted",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " in",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ascending",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " order",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " and",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " merges",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " them",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " into",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " one",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " list",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " that",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " is",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " also",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " sorted",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " in",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ascending",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " order",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ".",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " The",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " merge",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " is",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " performed",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " in",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " O",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "(n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " +",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " m",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ")",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " time",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " complexity",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " where",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " and",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " m",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " are",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " the",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " lengths",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " of",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " the",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " two",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " input",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " lists",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " using",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " a",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " two",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "-pointer",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " technique",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ".",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " Args",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ":",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "       ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " list",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "1",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ":",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " The",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " first",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " sorted",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " list",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ".",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "       ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " list",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "2",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ":",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " The",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " second",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " sorted",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " list",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ".",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " Returns",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ":",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "       ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " A",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " new",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " list",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " containing",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " all",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " elements",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " from",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " both",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " input",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " lists",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " sorted",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " in",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ascending",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " order",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ".",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " Examples",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ":",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "       ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " >>>",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " merge",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_sorted",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_lists",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "([",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "1",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "3",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "5",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "],",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " [",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "2",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "4",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "6",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "])",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "       ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " [",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "1",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "2",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "3",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "4",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "5",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "6",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "]",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "       ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " >>>",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " merge",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_sorted",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_lists",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "([],",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " [",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "1",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "2",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "3",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "])",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "       ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " [",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "1",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "2",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "3",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "]",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "       ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " >>>",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " merge",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_sorted",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_lists",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "([",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "1",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "2",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "3",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "],",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " [])",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "       ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " [",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "1",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "2",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "3",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "]",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "       ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " >>>",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " merge",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_sorted",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_lists",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "([],",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " [])",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "       ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " []",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " \"\"\"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " merged",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " =",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " []",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " i",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " j",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " =",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "0",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "0",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " #",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " Compare",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " elements",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " from",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " both",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " lists",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " and",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " append",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " the",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " smaller",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " one",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " while",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " i",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " <",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " len",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "(list",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "1",
+   "logprob": 0.0,
+   "top": []
+  }
+ ]
+}

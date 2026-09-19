@@ -1,0 +1,102 @@
+bonsai2-mtp recipe: graft the Qwen 3.8 27B MTP head onto Ternary Bonsai 2 27B
+
+You need: the PrismML llama.cpp fork (release prism-b10685 or later, CUDA build),
+Python 3.10+, and two GGUF files. Nothing here decodes tensors, so no GPU and
+no extra Python packages are needed for the graft itself. About 25 GB of disk.
+
+1. Pull the two files.
+
+   Ternary Bonsai 2 27B (PrismML), 5,946,648,928 bytes
+     sha256 53107f530aa52eb00912263ab1ee29bd199261c87cd7b4ad4ca1318c1fe33ee3
+     Ternary-Bonsai-2-27B-PTQ1_0.gguf
+
+   Donor: unsloth/Qwen3.8-27B-GGUF, Qwen3.8-27B-UD-Q4_K_M.gguf, 16,464,440,224 bytes
+     sha256 322e194ff79741c7baa497c240f677f54b201b0efab44ca8e50f122b39123482
+     wget -c https://huggingface.co/unsloth/Qwen3.8-27B-GGUF/resolve/main/Qwen3.8-27B-UD-Q4_K_M.gguf
+   Any Qwen3.8-27B GGUF that carries the blk.64.nextn.* tensors works; the head
+   comes out in whatever quant the donor used (Q6_K/Q8_0/F32 in this one).
+
+2. Extract the head (3 seconds, writes about 1 GB).
+
+   python3 tools/extract_head.py Qwen3.8-27B-UD-Q4_K_M.gguf qwen38-27b-nextn-head.gguf
+
+   This copies the 15 tensors of blk.64 (the MTP decoder block plus
+   nextn.eh_proj, nextn.enorm, nextn.hnorm, nextn.shared_head_norm) and adds a
+   16th, blk.64.nextn.embed_tokens.weight, a copy of the donor's token_embd
+   (Q4_K, 682 MiB). Bonsai 2 keeps its own embedding table in a rotated
+   Hadamard basis and the fork's MTP graph reads it without the inverse, so the
+   head needs a plain embedding table of its own. Expected output: 16 tensors,
+   1,066,172,160 bytes, sha256 89a3144aff7a71cf4c12e089bb6174800851fa4d8c3ee32c3e67192f0e294956.
+
+3. Merge (20 seconds, writes 7 GB).
+
+   python3 tools/merge.py Ternary-Bonsai-2-27B-PTQ1_0.gguf qwen38-27b-nextn-head.gguf Ternary-Bonsai-2-27B-PTQ1_0-mtp.gguf
+
+   Expected output: 867 tensors, 7,012,820,512 bytes,
+   sha256 83a396ee218c36e5ed88205eccb940a71549d9a72a3d020cc2713f94a78f70f0.
+   Every Bonsai 2 tensor keeps its bytes and offset; the header gains
+   qwen35.nextn_predict_layers = 1, qwen35.block_count goes 64 -> 65, and four
+   graft.* provenance keys are appended. To prove nothing else changed:
+
+   python3 tools/merge.py --strip Ternary-Bonsai-2-27B-PTQ1_0-mtp.gguf check.gguf
+   sha256sum check.gguf   # 53107f53... , the original
+
+4. Serve (RTX 3060 12GB, one slot, q4_0 K/V, flash attention).
+
+   llama-server -m Ternary-Bonsai-2-27B-PTQ1_0-mtp.gguf -ngl 99 -fa on -c 131072 -np 1 \
+     -ctk q4_0 -ctv q4_0 --jinja --temp 1.0 --top-p 0.95 --top-k 20 \
+     --spec-type draft-mtp --spec-draft-n-max 1 --host 127.0.0.1 --port 8899
+
+   Expected log lines: "n_layer_all = 65", "creating MTP draft context against
+   the target model", "adding speculative implementation 'draft-mtp'",
+   "speculative decoding context initialized". Expected VRAM: 10,638 MiB at
+   131072 (f16 draft K/V), 11,726 MiB at 163840 with -ctkd q4_0 -ctvd q4_0.
+   196608 does not fit on the prebuilt fork with this file (the MTP compute
+   buffer OOMs), see step 6.
+
+   Use --spec-draft-n-max 1. On this card the target model's PTQ1_0 kernels
+   make a 3 token verify batch cost 2.4 single steps, so n-max 2 and 3 are
+   slower than the flag off. Expected decode on probe.py at 131072, thinking
+   off: 25.0 tok/s flag off, 27.1 tok/s with n-max 1 (code 29.5, prose 23.6,
+   bash 27.1), draft acceptance 0.5 (prose) to 0.95 (code).
+
+5. Check identity before trusting the speed.
+
+   python3 tools/verify_identity.py run http://127.0.0.1:8899 results/identity on
+   (restart without the two --spec flags)
+   python3 tools/verify_identity.py run http://127.0.0.1:8899 results/identity off
+   python3 tools/verify_identity.py compare results/identity off on
+
+   On this fork and card the greedy texts differ after 14 to 52 tokens, at
+   near ties, because the CUDA kernels are not batch-size invariant on PTQ1_0
+   (tools/batch_numerics.py shows it without any speculative decoding). Treat
+   the numbers above as throughput, not as a lossless speedup.
+
+6. Optional: the lean file and the one-commit fork patch.
+
+   python3 tools/extract_head.py Qwen3.8-27B-UD-Q4_K_M.gguf head-lean.gguf --no-embed-tokens
+   python3 tools/merge.py Ternary-Bonsai-2-27B-PTQ1_0.gguf head-lean.gguf Ternary-Bonsai-2-27B-PTQ1_0-mtp-lean.gguf
+   (6,297,658,848 bytes, 866 tensors, sha256 1e33c571a5ce7a9a3e42474d66192923d5a6d77da7fb3a22986dc809522b5685)
+
+   The prebuilt fork refuses it: "Hadamard-latent table 'token_embd.weight' is
+   read without the inverse transform". Apply results/0001-qwen35-mtp-hadamard-inverse.patch
+   (15 lines in src/models/qwen35.cpp) to the fork at 7dffb15, build with
+   cmake -B build -DGGML_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=86 && cmake --build build --target llama-server -j,
+   and the lean file loads at 131072 in 9,956 MiB and at 196608 in 11,990 MiB,
+   same speed and acceptance as the fat file.
+
+7. Optional: the kernel branch (fast and lossless on the RTX 3060 12GB).
+
+   Apply results/kernel/patches/0001..0006 on top of the fork at 7dffb15 plus the
+   qwen35 MTP patch from step 6 (git am, in order), build as in step 6, and serve
+   the merged file with
+
+   GGML_CUDA_BATCH_INVARIANT=1 llama-server -m Ternary-Bonsai-2-27B-PTQ1_0-mtp.gguf \
+     -ngl 99 -fa on -c 131072 -np 1 -ctk q4_0 -ctv q4_0 --jinja \
+     --spec-type draft-mtp --spec-draft-n-max 1
+
+   Expected on probe.py, thinking off: 39.8 tok/s flag off, 50.1 tok/s with the
+   flag, and the greedy text with the flag byte-identical to the greedy text
+   without it (tools/verify_identity.py). Without GGML_CUDA_BATCH_INVARIANT=1 the
+   same build runs n-max 2 at 48.7 tok/s but greedy output is not identical.
+   llama-bench tg32 on this build: 39.8 tok/s against 26.1 on the prebuilt fork.

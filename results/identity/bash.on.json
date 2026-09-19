@@ -1,0 +1,1559 @@
+{
+ "prompt_id": "bash",
+ "arm": "on",
+ "prompt": "write a bash script that watches a directory and prints new files as they appear.",
+ "max_tokens": 300,
+ "finish_reason": "length",
+ "completion_tokens": 300,
+ "reasoning_chars": 0,
+ "sha256": "53ac46fabdc825c6a498fee6f043dee66391d2941fa729c27f4d25fa2a3dcfd0",
+ "timings": {
+  "cache_n": 0,
+  "prompt_n": 28,
+  "prompt_ms": 375.988,
+  "prompt_per_token_ms": 13.428142857142857,
+  "prompt_per_second": 74.47046182324968,
+  "predicted_n": 300,
+  "predicted_ms": 12779.945,
+  "predicted_per_token_ms": 42.74229096989966,
+  "predicted_per_second": 23.396031829557952,
+  "draft_n": 250,
+  "draft_n_accepted": 173
+ },
+ "tokens": [
+  {
+   "token": "```",
+   "logprob": -0.6723571419715881,
+   "top": [
+    [
+     "```",
+     -0.6723571419715881
+    ],
+    [
+     "Here",
+     -1.1630455255508423
+    ],
+    [
+     "#",
+     -2.019282817840576
+    ],
+    [
+     "You",
+     -4.435943126678467
+    ]
+   ]
+  },
+  {
+   "token": "bash",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "#!/",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "usr",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "/bin",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "/env",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " bash",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "#",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " watch",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_dir",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ".sh",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " -",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " Watch",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " a",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " directory",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " and",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " print",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " new",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " files",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " as",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " they",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " appear",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "set",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " -",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "eu",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "o",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " pipe",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "fail",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "#",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " Default",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " to",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " current",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " directory",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " if",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " no",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " argument",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " provided",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "WATCH",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_DIR",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "=\"${",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "1",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ":-",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ".",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "}\"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "#",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " Validate",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " directory",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " exists",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "if",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " [[",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " !",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " -",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "d",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " \"$",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "WATCH",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_DIR",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ]];",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " then",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " echo",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " \"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "Error",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ":",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " '$",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "WATCH",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_DIR",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "'",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " is",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " not",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " a",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " valid",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " directory",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ".\"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " >&",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "2",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " exit",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "1",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "fi",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "#",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " Resolve",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " to",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " absolute",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " path",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "WATCH",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_DIR",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "=\"$(",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "cd",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " \"$",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "WATCH",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_DIR",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " &&",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " pwd",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ")\"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "echo",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " \"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "Watching",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ":",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " $",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "WATCH",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_DIR",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "echo",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " \"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "Press",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " Ctrl",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "+C",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " to",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " stop",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ".\"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "echo",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " \"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "--------------------------------",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "#",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " Use",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " in",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "otify",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "wait",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " if",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " available",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " otherwise",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " fall",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " back",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " to",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " polling",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "if",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " command",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " -",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "v",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " in",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "otify",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "wait",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " &",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ">/",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "dev",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "/null",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ";",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " then",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " #",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " in",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "otify",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "wait",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " approach",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " (",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "efficient",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " event",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "-driven",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ")",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " in",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "otify",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "wait",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " -",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "m",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " -",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "r",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " -",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "e",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " create",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " -",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "e",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " moved",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_to",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " --",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "format",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " '%",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "w",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "%f",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "'",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " \"$",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "WATCH",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_DIR",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " |",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " \\",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "       ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " while",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " I",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "FS",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "=",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " read",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " -",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "r",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " file",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ";",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " do",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "           ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " #",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " Only",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " print",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " regular",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " files",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " (",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "skip",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " directories",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ")",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "           ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " if",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " [[",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " -",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "f",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " \"$",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "file",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ]];",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " then",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "               ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " echo",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " \"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "New",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " file",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ":",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " $",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "file",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\"",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "           ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " fi",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "       ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " done",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "else",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " #",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " Poll",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "ing",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " fallback",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " (",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "less",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " efficient",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " checks",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " every",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "1",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " second",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ")",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " declare",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " -",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "A",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " seen",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "_files",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " #",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " Seed",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " with",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " existing",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " files",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "   ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " while",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " I",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "FS",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "=",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " read",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " -",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "r",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " -",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "d",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " ''",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " file",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ";",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " do",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "\n",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "       ",
+   "logprob": -0.000327044544974342,
+   "top": [
+    [
+     "       ",
+     -0.000327044544974342
+    ],
+    [
+     "   ",
+     -8.623156547546387
+    ],
+    [
+     "      ",
+     -10.000288963317871
+    ],
+    [
+     "        ",
+     -10.470732688903809
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,777 @@
+{
+ "prompt_id": "prose",
+ "arm": "on_nmax1",
+ "prompt": "explain the difference between mmap and read for loading large files, one paragraph.",
+ "max_tokens": 300,
+ "finish_reason": "stop",
+ "completion_tokens": 147,
+ "reasoning_chars": 0,
+ "sha256": "591a3caa2c453b6233221af029d2dfc0da53c83f4f2e6229b984b855ba870583",
+ "timings": {
+  "cache_n": 0,
+  "prompt_n": 27,
+  "prompt_ms": 371.051,
+  "prompt_per_token_ms": 13.74262962962963,
+  "prompt_per_second": 72.76627741199997,
+  "predicted_n": 147,
+  "predicted_ms": 5721.997,
+  "predicted_per_token_ms": 39.191760273972605,
+  "predicted_per_second": 25.515567379710266,
+  "draft_n": 89,
+  "draft_n_accepted": 58
+ },
+ "tokens": [
+  {
+   "token": "`",
+   "logprob": -0.8912353515625,
+   "top": [
+    [
+     "`",
+     -0.8912353515625
+    ],
+    [
+     "While",
+     -1.4397563934326172
+    ],
+    [
+     "The",
+     -1.5459669828414917
+    ],
+    [
+     "Unlike",
+     -3.2413272857666016
+    ]
+   ]
+  },
+  {
+   "token": "m",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "map",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "`",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " and",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " `",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "read",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "`",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " differ",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " fundamentally",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " in",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " how",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " they",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " handle",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " memory",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " management",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " and",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " data",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " transfer",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " for",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " large",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " files",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ".",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " `",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "read",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "`",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " is",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " a",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " system",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " call",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " that",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " explicitly",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " copies",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " data",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " from",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " the",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " file",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " into",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " a",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " user",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "-space",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " buffer",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " requiring",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " the",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " application",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " to",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " manage",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " buffer",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " allocation",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " handle",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " partial",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " reads",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " and",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " perform",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " multiple",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " calls",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " to",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " load",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " the",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " entire",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " file",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " which",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " can",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " be",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " inefficient",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " for",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " very",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " large",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " datasets",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " due",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " to",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " the",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " overhead",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " of",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " repeated",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " system",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " calls",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " and",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " memory",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " copying",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ".",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " In",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " contrast",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " `",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "m",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "map",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "`",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " maps",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " the",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " file",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " directly",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " into",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " the",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " process",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "'s",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " virtual",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " address",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " space",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " allowing",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " the",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " operating",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " system",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " to",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " laz",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "ily",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " load",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " only",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " the",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " necessary",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " pages",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " into",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " physical",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " memory",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " as",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " the",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " application",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " accesses",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " them",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ",",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " thereby",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " eliminating",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " the",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " need",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " for",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " explicit",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " copying",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " and",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " enabling",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " efficient",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " random",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " access",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " and",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " sharing",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " of",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " the",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " file",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " data",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " across",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": " processes",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": ".",
+   "logprob": 0.0,
+   "top": []
+  },
+  {
+   "token": "",
+   "logprob": 0.0,
+   "top": []
+  }
+ ]
+}

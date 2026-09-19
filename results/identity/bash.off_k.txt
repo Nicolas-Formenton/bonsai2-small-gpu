@@ -1,0 +1,40 @@
+```bash
+#!/usr/bin/env bash
+
+# watch_dir.sh - Watch a directory and print new files as they appear
+# Usage: ./watch_dir.sh [directory]
+
+set -euo pipefail
+
+# Default to current directory if no argument provided
+DIR="${1:-.}"
+
+# Validate directory exists
+if [[ ! -d "$DIR" ]]; then
+    echo "Error: '$DIR' is not a valid directory." >&2
+    exit 1
+fi
+
+# Resolve to absolute path
+DIR="$(cd "$DIR" && pwd)"
+
+echo "Watching: $DIR"
+echo "Press Ctrl+C to stop."
+echo "--------------------------------"
+
+# Use inotifywait if available (Linux), otherwise fall back to polling
+if command -v inotifywait &>/dev/null; then
+    # inotifywait approach (efficient, event-driven)
+    inotifywait -m -r -e create -e moved_to --format '%w%f' "$DIR" | \
+        while IFS= read -r file; do
+            # Only print regular files (skip directories)
+            if [[ -f "$file" ]]; then
+                echo "New file: $file"
+            fi
+        done
+else
+    # Polling fallback (portable, works on macOS/BSD)
+    declare -A seen_files
+
+    # Seed with existing files
+    while IFS= read -r -d
